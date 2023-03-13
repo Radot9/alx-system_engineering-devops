@@ -1,2 +1,3 @@
 #!/bin/bash
-taik /etc/passwd
+talk /etc/passwd
+
