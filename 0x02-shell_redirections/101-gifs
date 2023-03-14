@@ -1,11 +1,3 @@
 #!/bin/bash
-
-shopt -s globstar nullglob
-
-for file in **/*.gif; do
-    if [[ -f $file ]]; then
-        filename=$(echo "${file%.*}")
-        echo "$filename"
-    fi
-done | sort -f
+find -type f -name "*.gif" | rev | cut -d "/" -f 1 | cut -d '.' -f 2- | rev | LC_ALL=C sort -f
 
